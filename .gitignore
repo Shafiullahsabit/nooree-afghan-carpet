@@ -1,18 +1,41 @@
-# Build and Release Folders
+# Dependencies
+/node_modules/
+/.pnp
+.pnp.*
+
+# Next.js
+/.next/
+/out/
+/build/
+/next-env.d.ts
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and test output
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+/coverage/
+/playwright-report/
+/test-results/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Existing legacy build artifacts
 bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
-
-# Other files and folders
 .settings/
-
-# Executables
 *.swf
 *.air
 *.ipa
 *.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
