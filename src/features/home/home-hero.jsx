@@ -18,29 +18,20 @@ export function HomeHero({ locale, dictionary }) {
             {dictionary.hero.primaryAction}
             <Icon name="arrow" />
           </Link>
-          <Link className="text-link" href={`/${locale}#overview`}>
-            {dictionary.hero.secondaryAction}
-            <Icon name="arrow" />
-          </Link>
+          <a
+            className="hero-location-link"
+            href={BUSINESS_LOCATION.mapsUrl}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <LocationIcon className="hero-location-icon" />
+            <span>{dictionary.visit.locationLabel}</span>
+          </a>
         </div>
         <div className="hero-note">
           <span className="hero-note-rule" />
           <span>{dictionary.hero.note}</span>
         </div>
-        <a
-          className="hero-location-link"
-          href={BUSINESS_LOCATION.mapsUrl}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <LocationIcon />
-          <span>
-            <strong>{dictionary.visit.locationLabel}</strong>
-            <span className="location-coordinates" dir="ltr">
-              {BUSINESS_LOCATION.coordinates}
-            </span>
-          </span>
-        </a>
       </div>
       <div className="hero-art-wrap">
         <div

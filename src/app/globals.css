@@ -393,28 +393,21 @@ a:focus-visible {
 .hero-location-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 22px;
+  gap: 9px;
   color: var(--color-ink);
-  line-height: 1.6;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 160ms ease;
 }
 
 .hero-location-link:hover {
   color: #a47638;
 }
 
-.hero-location-link > span {
-  display: grid;
-}
-
-.hero-location-link strong {
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.hero-location-link .location-coordinates {
-  color: #88867b;
-  font-size: 10px;
+.hero-location-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .hero-art-wrap {
