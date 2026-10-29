@@ -7,6 +7,8 @@ import { FeaturedCollection } from "@/features/home/featured-collection";
 import { HomeCategories } from "@/features/home/home-categories";
 import { HomeHero } from "@/features/home/home-hero";
 import { HomeOffers } from "@/features/home/home-offers";
+import { LocationIcon } from "@/components/icons/location-icon";
+import { BUSINESS_LOCATION } from "@/config/site";
 import { getActiveCategories, getFeaturedProducts } from "@/features/products/queries";
 import { getDictionary, locales } from "@/i18n/config";
 import { sampleProducts } from "@/lib/sample-products";
@@ -75,10 +77,24 @@ export default async function LocalizedHomePage({ params }) {
             <h2>{dictionary.visit.title}</h2>
           </div>
           <p>{dictionary.visit.description}</p>
-          <Link className="button button-outline" href={`/${locale}/contact`}>
-            {dictionary.visit.action}
-            <Icon name="arrow" />
-          </Link>
+          <div className="visit-actions">
+            <a
+              className="visit-location"
+              href={BUSINESS_LOCATION.mapsUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <LocationIcon />
+              <span>
+                <strong>{dictionary.visit.locationLabel}</strong>
+                <span className="location-coordinates" dir="ltr">{BUSINESS_LOCATION.coordinates}</span>
+              </span>
+            </a>
+            <Link className="button button-outline" href={`/${locale}/contact`}>
+              {dictionary.visit.action}
+              <Icon name="arrow" />
+            </Link>
+          </div>
         </section>
       </main>
 

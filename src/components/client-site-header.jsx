@@ -8,8 +8,17 @@ import { MenuIcon } from "@/components/icons/menu-icon";
 import { SearchIcon } from "@/components/icons/search-icon";
 import { ShoppingBagIcon } from "@/components/icons/shopping-bag-icon";
 import { UserIcon } from "@/components/icons/user-icon";
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 
-export function ClientSiteHeader({ locale, locales, header, brandHome, brandCaption }) {
+export function ClientSiteHeader({
+  locale,
+  locales,
+  header,
+  brandHome,
+  brandCaption,
+  whatsappNumber,
+  whatsappUrl,
+}) {
   const pathname = usePathname();
   const [languageOpen, setLanguageOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -136,6 +145,17 @@ export function ClientSiteHeader({ locale, locales, header, brandHome, brandCapt
             >
               <ShoppingBagIcon />
             </Link>
+            <a
+              aria-label={`${header.whatsapp}: ${whatsappNumber}`}
+              className="header-icon-button header-whatsapp"
+              href={whatsappUrl}
+              rel="noreferrer"
+              target="_blank"
+              title={`${header.whatsapp}: ${whatsappNumber}`}
+            >
+              <WhatsAppIcon />
+              <span className="whatsapp-number" dir="ltr">{whatsappNumber}</span>
+            </a>
 
             <div className="language-picker" ref={languagePanelRef}>
               <button

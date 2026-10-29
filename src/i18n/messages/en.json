@@ -20,6 +20,7 @@
     "submitSearch": "Submit search",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
+    "whatsapp": "WhatsApp",
     "ourCraft": "Our craft",
     "contact": "Get in touch",
     "language": "Choose language",
@@ -98,6 +99,7 @@
     "eyebrow": "A note, a question, a conversation",
     "title": "We would love to hear from you.",
     "description": "This sample storefront is a starting point. Reach out to discuss the collection or learn more about Afghan carpet traditions.",
+    "locationLabel": "Visit our location",
     "action": "Send us a note"
   },
   "footer": {

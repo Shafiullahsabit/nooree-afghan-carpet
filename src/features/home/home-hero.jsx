@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Icon } from "@/components/icon";
+import { LocationIcon } from "@/components/icons/location-icon";
+import { BUSINESS_LOCATION } from "@/config/site";
 
 export function HomeHero({ locale, dictionary }) {
   return (
@@ -25,8 +27,21 @@ export function HomeHero({ locale, dictionary }) {
           <span className="hero-note-rule" />
           <span>{dictionary.hero.note}</span>
         </div>
+        <a
+          className="hero-location-link"
+          href={BUSINESS_LOCATION.mapsUrl}
+          rel="noreferrer"
+          target="_blank"
+        >
+          <LocationIcon />
+          <span>
+            <strong>{dictionary.visit.locationLabel}</strong>
+            <span className="location-coordinates" dir="ltr">
+              {BUSINESS_LOCATION.coordinates}
+            </span>
+          </span>
+        </a>
       </div>
-
       <div className="hero-art-wrap">
         <div
           className="hero-art"

@@ -22,6 +22,9 @@ Customer-facing multilingual storefront foundation for Nooree Afghan Carpet.
 The optional product-image bucket and business phone, WhatsApp, and location
 values are configured with the matching blank entries in `.env.example`.
 Leave unknown business details blank rather than publishing placeholders.
+The homepage and header currently use the WhatsApp number and map coordinates
+provided for this project; these public contact values are defined in
+`src/config/site.js`.
 
 Never put a database password, service-role key, or other secret in a
 `NEXT_PUBLIC_` variable or commit it to Git. `.env.local` is ignored.
